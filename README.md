@@ -1,11 +1,9 @@
-# 📋 Informe Automatizado de Bajas de LaLiga
+# 📋 Informe Automatizado de Bajas de LaLiga (API Real)
 
-Última actualización automática: **2026-09-17**
+Última actualización mediante API-Football: **2026-09-17**
 
-| Equipo             | Jugador   | Tipo de Incidencia      | Estado   | Detalle          |
-|:-------------------|:----------|:------------------------|:---------|:-----------------|
-| Real Madrid        | Militão   | Física / Médica         | Baja     | Rotura Ligamento |
-| FC Barcelona       | Gavi      | Física / Médica         | Duda     | Molestias        |
-| Atlético de Madrid | Koke      | Disciplinaria (Sanción) | Baja     | Cinco Amarillas  |
+| Equipo    | Jugador   | Tipo de Incidencia   | Estado   | Detalle                   |
+|:----------|:----------|:---------------------|:---------|:--------------------------|
+| Sin datos | N/A       | N/A                  | N/A      | API no devolvió registros |
 
-*Los archivos Excel y CSV completos están guardados y actualizados cronológicamente dentro de la carpeta `informes/`.*
+*Los históricos se encuentran a salvo en la carpeta `informes/`.*
