@@ -2,8 +2,10 @@
 
 Última actualización automática: **2026-09-17**
 
-| Equipo           | Jugador                  | Tipo de Incidencia   | Estado   | Detalle                                                   |
-|:-----------------|:-------------------------|:---------------------|:---------|:----------------------------------------------------------|
-| Sistema (Prueba) | Verificación de carpetas | Control              | Activo   | El script funciona pero la web requiere revisión de HTML. |
+| Equipo             | Jugador   | Tipo de Incidencia      | Estado   | Detalle          |
+|:-------------------|:----------|:------------------------|:---------|:-----------------|
+| Real Madrid        | Militão   | Física / Médica         | Baja     | Rotura Ligamento |
+| FC Barcelona       | Gavi      | Física / Médica         | Duda     | Molestias        |
+| Atlético de Madrid | Koke      | Disciplinaria (Sanción) | Baja     | Cinco Amarillas  |
 
-*Los archivos Excel completos están guardados en la carpeta `informes/`.*
+*Los archivos Excel y CSV completos están guardados y actualizados cronológicamente dentro de la carpeta `informes/`.*
