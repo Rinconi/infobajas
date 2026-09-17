@@ -1,5 +1,6 @@
 name: Actualizar Informe de Bajas
 
+
 on:
   schedule:
     # Se ejecuta automáticamente todos los viernes a las 09:00 UTC (10:00/11:00 AM hora de España)
@@ -24,7 +25,10 @@ jobs:
         pip install requests beautifulsoup4 pandas lxml tabulate openpyxl
 
     - name: Ejecutar script extractor
+      env:
+        API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
       run: python actualizar_bajas.py
+
 
     - name: Guardar cambios en el repositorio
       run: |
