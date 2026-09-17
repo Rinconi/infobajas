@@ -1,199 +1,177 @@
-# 📋 Informe de Bajas de Primera División
+# 📋 Informe de Bajas de Primera División (Datos: Comuniazo)
 
-Última actualización: **2026-09-17**
+Última actualización automática: **2026-09-17**
 
 ## ⚽ Alavés
 
-| Jugador     | Tipo de Incidencia   | Estado   | Detalle                        |
-|:------------|:---------------------|:---------|:-------------------------------|
-| Hugo Novoa  | Física / Médica      | Baja     | Molestias en el pubis          |
-| Aitor Mañas | Física / Médica      | Baja     | Parte médico oficial pendiente |
-| Abqar       | Física / Médica      | Baja     | Molestias físicas              |
+| Jugador             | Tipo de Incidencia   | Estado   | Detalle                                          |
+|:--------------------|:---------------------|:---------|:-------------------------------------------------|
+| Facundo Garcés      | Física / Médica      | Baja     | Rotura de ligamento cruzado. Baja indefinida.    |
+| Benavídez Protesoni | Física / Médica      | Baja     | Molestias. Baja esta jornada.                    |
+| Mikel Rodríguez     | Física / Médica      | Baja     | Rotura de ligamento cruzado. Baja hasta Abril.   |
+| Aitor Mañas         | Física / Médica      | Baja     | Traumatismo craneoencefálico. Baja esta jornada. |
 
 ---
 
 ## ⚽ Athletic Club
 
-| Jugador     | Tipo de Incidencia   | Estado   | Detalle                              |
-|:------------|:---------------------|:---------|:-------------------------------------|
-| Unai Simón  | Física / Médica      | Baja     | Operado de la muñeca                 |
-| Dani Vivian | Física / Médica      | Baja     | Lesión en el aductor                 |
-| Unai Egiluz | Física / Médica      | Baja     | Rotura de ligamento cruzado anterior |
+| Jugador        | Tipo de Incidencia   | Estado   | Detalle                                        |
+|:---------------|:---------------------|:---------|:-----------------------------------------------|
+| Daniel Vivian  | Física / Médica      | Baja     | Lesión en el aductor. Baja hasta Octubre.      |
+| Unai Egiluz    | Física / Médica      | Baja     | Rotura de ligamento cruzado. Baja hasta Enero. |
+| Peio Canales   | Física / Médica      | Baja     | Lesión en el sóleo. Baja esta jornada.         |
+| Selton Sánchez | Física / Médica      | Baja     | No convocado. Baja esta jornada.               |
+| Asier Hierro   | Física / Médica      | Baja     | No convocado. Baja esta jornada.               |
 
 ---
 
 ## ⚽ Atlético de Madrid
 
-| Jugador       | Tipo de Incidencia   | Estado   | Detalle                     |
-|:--------------|:---------------------|:---------|:----------------------------|
-| Pablo Barrios | Física / Médica      | Baja     | Lesión muscular en el sóleo |
+| Jugador           | Tipo de Incidencia   | Estado   | Detalle                                  |
+|:------------------|:---------------------|:---------|:-----------------------------------------|
+| Pablo Barrios     | Física / Médica      | Baja     | Lesión en el sóleo. Baja esta jornada.   |
+| Julián Álvarez    | Física / Médica      | Baja     | Sobrecarga. Baja esta jornada.           |
+| Alexander Sørloth | Física / Médica      | Baja     | Contractura muscular. Baja esta jornada. |
 
 ---
 
 ## ⚽ Celta de Vigo
 
-| Jugador    | Tipo de Incidencia   | Estado   | Detalle                       |
-|:-----------|:---------------------|:---------|:------------------------------|
-| Iago Aspas | Física / Médica      | Baja     | Problemas físicos confirmados |
-| Antañón    | Física / Médica      | Baja     | Lesión muscular               |
-
----
-
-## ⚽ Deportivo
-
-| Jugador   | Tipo de Incidencia      | Estado   | Detalle              |
-|:----------|:------------------------|:---------|:---------------------|
-| Angeliño  | Disciplinaria (Sanción) | Baja     | Tarjeta roja directa |
+| Jugador   | Tipo de Incidencia   | Estado     | Detalle                                   |
+|:----------|:---------------------|:-----------|:------------------------------------------|
+| Sin bajas | Ninguna              | Disponible | Plantilla limpia y lista para la jornada. |
 
 ---
 
 ## ⚽ Espanyol
 
-| Jugador        | Tipo de Incidencia      | Estado   | Detalle                           |
-|:---------------|:------------------------|:---------|:----------------------------------|
-| Javi Puado     | Física / Médica         | Baja     | Molestias musculares              |
-| Kike García    | Física / Médica         | Baja     | Baja de larga duración hasta 2027 |
-| Gorosabel      | Física / Médica         | Baja     | Problemas físicos                 |
-| Jofre          | Física / Médica         | Baja     | Esguince leve                     |
-| Omar El Hilali | Disciplinaria (Sanción) | Baja     | Tarjeta roja directa              |
+| Jugador   | Tipo de Incidencia   | Estado     | Detalle                                   |
+|:----------|:---------------------|:-----------|:------------------------------------------|
+| Sin bajas | Ninguna              | Disponible | Plantilla limpia y lista para la jornada. |
 
 ---
 
 ## ⚽ FC Barcelona
 
-| Jugador         | Tipo de Incidencia   | Estado   | Detalle                                   |
-|:----------------|:---------------------|:---------|:------------------------------------------|
-| Dani Olmo       | Física / Médica      | Baja     | Lesión en el bíceps femoral               |
-| Fermín López    | Física / Médica      | Baja     | Lesión en el recto anterior               |
-| Marc Bernal     | Física / Médica      | Baja     | Rotura de ligamento cruzado               |
-| Frenkie de Jong | Física / Médica      | Baja     | Lesión grave de rodilla (Baja hasta 2027) |
-| Joan García     | Física / Médica      | Duda     | Leves molestias en la rodilla derecha     |
+| Jugador         | Tipo de Incidencia   | Estado   | Detalle                                        |
+|:----------------|:---------------------|:---------|:-----------------------------------------------|
+| Joan García     | Física / Médica      | Baja     | Molestias. Baja hasta finales de Septiembre.   |
+| Frenkie de Jong | Física / Médica      | Baja     | Lesión de rodilla. Baja hasta Noviembre.       |
+| Bardghji        | Física / Médica      | Baja     | Rotura de ligamento cruzado. Baja hasta Marzo. |
+| Bisiwu          | Física / Médica      | Baja     | Parte médico oficial en revisión.              |
 
 ---
 
 ## ⚽ Getafe
 
-| Jugador        | Tipo de Incidencia   | Estado   | Detalle                                    |
-|:---------------|:---------------------|:---------|:-------------------------------------------|
-| Uche           | Física / Médica      | Baja     | Lesión grave (Baja para toda la temporada) |
-| Juanmi Jiménez | Física / Médica      | Baja     | Dolencias musculares                       |
-| Kiko Femenía   | Física / Médica      | Baja     | Sobrecarga                                 |
+| Jugador   | Tipo de Incidencia   | Estado     | Detalle                                   |
+|:----------|:---------------------|:-----------|:------------------------------------------|
+| Sin bajas | Ninguna              | Disponible | Plantilla limpia y lista para la jornada. |
 
 ---
 
 ## ⚽ Girona
 
-| Jugador              | Tipo de Incidencia   | Estado     | Detalle          |
-|:---------------------|:---------------------|:-----------|:-----------------|
-| Sin bajas reportadas | Ninguna              | Disponible | Plantilla limpia |
+| Jugador   | Tipo de Incidencia   | Estado     | Detalle                                   |
+|:----------|:---------------------|:-----------|:------------------------------------------|
+| Sin bajas | Ninguna              | Disponible | Plantilla limpia y lista para la jornada. |
 
 ---
 
 ## ⚽ Las Palmas
 
-| Jugador              | Tipo de Incidencia   | Estado     | Detalle          |
-|:---------------------|:---------------------|:-----------|:-----------------|
-| Sin bajas reportadas | Ninguna              | Disponible | Plantilla limpia |
+| Jugador   | Tipo de Incidencia   | Estado     | Detalle                                   |
+|:----------|:---------------------|:-----------|:------------------------------------------|
+| Sin bajas | Ninguna              | Disponible | Plantilla limpia y lista para la jornada. |
 
 ---
 
 ## ⚽ Leganés
 
-| Jugador              | Tipo de Incidencia   | Estado     | Detalle          |
-|:---------------------|:---------------------|:-----------|:-----------------|
-| Sin bajas reportadas | Ninguna              | Disponible | Plantilla limpia |
+| Jugador   | Tipo de Incidencia   | Estado     | Detalle                                   |
+|:----------|:---------------------|:-----------|:------------------------------------------|
+| Sin bajas | Ninguna              | Disponible | Plantilla limpia y lista para la jornada. |
 
 ---
 
 ## ⚽ Mallorca
 
-| Jugador              | Tipo de Incidencia   | Estado     | Detalle          |
-|:---------------------|:---------------------|:-----------|:-----------------|
-| Sin bajas reportadas | Ninguna              | Disponible | Plantilla limpia |
+| Jugador   | Tipo de Incidencia   | Estado     | Detalle                                   |
+|:----------|:---------------------|:-----------|:------------------------------------------|
+| Sin bajas | Ninguna              | Disponible | Plantilla limpia y lista para la jornada. |
 
 ---
 
 ## ⚽ Osasuna
 
-| Jugador         | Tipo de Incidencia   | Estado   | Detalle               |
-|:----------------|:---------------------|:---------|:----------------------|
-| Valentín Rosier | Física / Médica      | Baja     | Problemas musculares  |
-| Aimar Oroz      | Física / Médica      | Baja     | Molestias en el muslo |
-| Herrando        | Física / Médica      | Baja     | Esguince de tobillo   |
-| Moi Gómez       | Física / Médica      | Baja     | Lesión fibrilar       |
+| Jugador   | Tipo de Incidencia   | Estado     | Detalle                                   |
+|:----------|:---------------------|:-----------|:------------------------------------------|
+| Sin bajas | Ninguna              | Disponible | Plantilla limpia y lista para la jornada. |
 
 ---
 
 ## ⚽ Rayo Vallecano
 
-| Jugador              | Tipo de Incidencia   | Estado     | Detalle          |
-|:---------------------|:---------------------|:-----------|:-----------------|
-| Sin bajas reportadas | Ninguna              | Disponible | Plantilla limpia |
+| Jugador   | Tipo de Incidencia   | Estado     | Detalle                                   |
+|:----------|:---------------------|:-----------|:------------------------------------------|
+| Sin bajas | Ninguna              | Disponible | Plantilla limpia y lista para la jornada. |
 
 ---
 
 ## ⚽ Real Betis
 
-| Jugador      | Tipo de Incidencia   | Estado   | Detalle                       |
-|:-------------|:---------------------|:---------|:------------------------------|
-| Aitor Ruibal | Física / Médica      | Baja     | Lesión muscular en el aductor |
+| Jugador   | Tipo de Incidencia   | Estado     | Detalle                                   |
+|:----------|:---------------------|:-----------|:------------------------------------------|
+| Sin bajas | Ninguna              | Disponible | Plantilla limpia y lista para la jornada. |
 
 ---
 
 ## ⚽ Real Madrid
 
-| Jugador           | Tipo de Incidencia   | Estado   | Detalle                           |
-|:------------------|:---------------------|:---------|:----------------------------------|
-| Eduardo Camavinga | Física / Médica      | Baja     | Esguince de rodilla               |
-| Dani Ceballos     | Física / Médica      | Baja     | Esguince de tobillo               |
-| Éder Militão      | Física / Médica      | Baja     | Proceso de recuperación muscular  |
-| Rodrygo Goes      | Física / Médica      | Baja     | Trabajo específico en el gimnasio |
-| Ferland Mendy     | Física / Médica      | Baja     | Molestias musculares              |
+| Jugador   | Tipo de Incidencia   | Estado     | Detalle                                   |
+|:----------|:---------------------|:-----------|:------------------------------------------|
+| Sin bajas | Ninguna              | Disponible | Plantilla limpia y lista para la jornada. |
 
 ---
 
 ## ⚽ Real Sociedad
 
-| Jugador       | Tipo de Incidencia   | Estado   | Detalle                     |
-|:--------------|:---------------------|:---------|:----------------------------|
-| Hamari Traoré | Física / Médica      | Baja     | Rotura de ligamento cruzado |
-| Odriozola     | Física / Médica      | Baja     | Problemas físicos           |
+| Jugador   | Tipo de Incidencia   | Estado     | Detalle                                   |
+|:----------|:---------------------|:-----------|:------------------------------------------|
+| Sin bajas | Ninguna              | Disponible | Plantilla limpia y lista para la jornada. |
 
 ---
 
 ## ⚽ Sevilla FC
 
-| Jugador       | Tipo de Incidencia   | Estado   | Detalle                               |
-|:--------------|:---------------------|:---------|:--------------------------------------|
-| Lucas Stassin | Física / Médica      | Baja     | Lesión miofascial en el aductor largo |
-| Kike Salas    | Física / Médica      | Baja     | Contusión (Trabajo específico)        |
-| Rubén Vargas  | Física / Médica      | Baja     | Esguince de tobillo                   |
-| Sangante      | Física / Médica      | Baja     | Molestias en la rodilla               |
+| Jugador   | Tipo de Incidencia   | Estado     | Detalle                                   |
+|:----------|:---------------------|:-----------|:------------------------------------------|
+| Sin bajas | Ninguna              | Disponible | Plantilla limpia y lista para la jornada. |
 
 ---
 
 ## ⚽ Valencia
 
-| Jugador              | Tipo de Incidencia   | Estado     | Detalle          |
-|:---------------------|:---------------------|:-----------|:-----------------|
-| Sin bajas reportadas | Ninguna              | Disponible | Plantilla limpia |
+| Jugador   | Tipo de Incidencia   | Estado     | Detalle                                   |
+|:----------|:---------------------|:-----------|:------------------------------------------|
+| Sin bajas | Ninguna              | Disponible | Plantilla limpia y lista para la jornada. |
 
 ---
 
 ## ⚽ Valladolid
 
-| Jugador              | Tipo de Incidencia   | Estado     | Detalle          |
-|:---------------------|:---------------------|:-----------|:-----------------|
-| Sin bajas reportadas | Ninguna              | Disponible | Plantilla limpia |
+| Jugador   | Tipo de Incidencia   | Estado     | Detalle                                   |
+|:----------|:---------------------|:-----------|:------------------------------------------|
+| Sin bajas | Ninguna              | Disponible | Plantilla limpia y lista para la jornada. |
 
 ---
 
 ## ⚽ Villarreal
 
-| Jugador              | Tipo de Incidencia   | Estado     | Detalle          |
-|:---------------------|:---------------------|:-----------|:-----------------|
-| Sin bajas reportadas | Ninguna              | Disponible | Plantilla limpia |
+| Jugador   | Tipo de Incidencia   | Estado     | Detalle                                   |
+|:----------|:---------------------|:-----------|:------------------------------------------|
+| Sin bajas | Ninguna              | Disponible | Plantilla limpia y lista para la jornada. |
 
 ---
 
-*Nota: Los registros acumulados se encuentran en la carpeta `informes/`.*
+*Nota: Los informes completos en formato Excel se guardan automáticamente en la carpeta `informes/`.*
