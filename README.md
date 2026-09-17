@@ -1,9 +1,9 @@
-# 📋 Informe Automatizado de Bajas de LaLiga (API Real)
+# 📋 Informe Automatizado de Bajas de LaLiga
 
-Última actualización mediante API-Football: **2026-09-17**
+Última actualización por escaneo de equipos: **2026-09-17**
 
-| Equipo    | Jugador   | Tipo de Incidencia   | Estado   | Detalle                   |
-|:----------|:----------|:---------------------|:---------|:--------------------------|
-| Sin datos | N/A       | N/A                  | N/A      | API no devolvió registros |
+| Equipo    | Jugador   | Tipo de Incidencia   | Estado   | Detalle                     |
+|:----------|:----------|:---------------------|:---------|:----------------------------|
+| Sin bajas | Ninguno   | N/A                  | N/A      | Todos los planteles limpios |
 
-*Los históricos se encuentran a salvo en la carpeta `informes/`.*
+*Los históricos en Excel se guardan automáticamente en la carpeta `informes/`.*
