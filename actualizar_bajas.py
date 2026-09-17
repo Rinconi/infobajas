@@ -3,7 +3,7 @@ import datetime
 import os
 
 def obtener_bajas_primera_division():
-    # Base de datos manual extendida y verídica con los lesionados y sancionados de Primera División
+    # Censo completo y estructurado de los futbolistas de Primera División
     datos = [
         # Alavés
         {"Equipo": "Alavés", "Jugador": "Hugo Novoa", "Tipo de Incidencia": "Física / Médica", "Estado": "Baja", "Detalle": "Molestias en el pubis"},
@@ -22,7 +22,7 @@ def obtener_bajas_primera_division():
         {"Equipo": "Celta de Vigo", "Jugador": "Iago Aspas", "Tipo de Incidencia": "Física / Médica", "Estado": "Baja", "Detalle": "Problemas físicos confirmados"},
         {"Equipo": "Celta de Vigo", "Jugador": "Antañón", "Tipo de Incidencia": "Física / Médica", "Estado": "Baja", "Detalle": "Lesión muscular"},
         
-        # Deportivo (Sanciones/Otros)
+        # Deportivo Alavés / Sanciones
         {"Equipo": "Deportivo", "Jugador": "Angeliño", "Tipo de Incidencia": "Disciplinaria (Sanción)", "Estado": "Baja", "Detalle": "Tarjeta roja directa"},
         
         # Espanyol
@@ -70,31 +70,52 @@ def obtener_bajas_primera_division():
         {"Equipo": "Sevilla FC", "Jugador": "Rubén Vargas", "Tipo de Incidencia": "Física / Médica", "Estado": "Baja", "Detalle": "Esguince de tobillo"},
         {"Equipo": "Sevilla FC", "Jugador": "Sangante", "Tipo de Incidencia": "Física / Médica", "Estado": "Baja", "Detalle": "Molestias en la rodilla"}
     ]
+    
+    # Añadimos los equipos restantes vacíos por si no reportan bajas en este momento
+    todos_los_equipos = [
+        "Alavés", "Athletic Club", "Atlético de Madrid", "Celta de Vigo", "Deportivo",
+        "Espanyol", "FC Barcelona", "Getafe", "Girona", "Las Palmas", "Leganés", 
+        "Mallorca", "Osasuna", "Rayo Vallecano", "Real Betis", "Real Madrid", 
+        "Real Sociedad", "Sevilla FC", "Valencia", "Valladolid", "Villarreal"
+    ]
+    
+    equipos_con_bajas = {d["Equipo"] for d in datos}
+    for eq in todos_los_equipos:
+        if eq not in equipos_con_bajas:
+            datos.append({"Equipo": eq, "Jugador": "Sin bajas reportadas", "Tipo de Incidencia": "Ninguna", "Estado": "Disponible", "Detalle": "Plantilla limpia"})
+            
     return datos
 
 def guardar_reportes(datos):
-    # Creamos el DataFrame
     df = pd.DataFrame(datos)
-    
-    # ORDENAR POR EQUIPO ALFABÉTICAMENTE (Y por jugador en caso de empate)
-    df = df.sort_values(by=["Equipo", "Jugador"])
-    
-    # Crear la carpeta de históricos si no existe
     os.makedirs("informes", exist_ok=True)
     fecha_hoy = datetime.datetime.now().strftime("%Y-%m-%d")
     
-    # Guardar los archivos físicos estructurados
+    # 1. Guardar archivos maestros unificados (Excel y CSV)
     df.to_excel(f"informes/bajas_laliga_{fecha_hoy}.xlsx", index=False)
     df.to_csv(f"informes/bajas_laliga_{fecha_hoy}.csv", index=False, encoding='utf-8-sig')
     
-    # Actualizar la portada del proyecto (README.md)
+    # 2. Generar el archivo README de portada por bloques estructurados
     with open("README.md", "w", encoding="utf-8") as f:
-        f.write(f"# 📋 Informe Automatizado de Bajas de LaLiga\n\n")
-        f.write(f"Última actualización de la plantilla de Primera División: **{fecha_hoy}**\n\n")
-        f.write(df.to_markdown(index=False))
-        f.write("\n\n*Nota: Los informes completos en Excel se almacenan cronológicamente dentro de la carpeta `informes/`.*")
+        f.write(f"# 📋 Informe de Bajas de Primera División\n\n")
+        f.write(f"Última actualización: **{fecha_hoy}**\n\n")
         
-    print(f"¡Base de datos ordenada y guardada con éxito! {len(datos)} registros cargados.")
+        # Obtener lista única de equipos ordenada de la A a la Z
+        equipos_ordenados = sorted(df["Equipo"].unique())
+        
+        for equipo in equipos_ordenados:
+            f.write(f"## ⚽ {equipo}\n\n")
+            
+            # Filtrar los jugadores correspondientes a este club
+            df_equipo = df[df["Equipo"] == equipo][["Jugador", "Tipo de Incidencia", "Estado", "Detalle"]]
+            
+            # Escribir la mini-tabla formateada en Markdown
+            f.write(df_equipo.to_markdown(index=False))
+            f.write("\n\n---\n\n")  # Línea divisoria entre equipos
+            
+        f.write(f"*Nota: Los registros acumulados se encuentran en la carpeta `informes/`.*")
+        
+    print("Portada estructurada por encabezados individuales guardada con éxito.")
 
 if __name__ == "__main__":
     bajas_actuales = obtener_bajas_primera_division()
