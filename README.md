@@ -1,11 +1,17 @@
 # 📋 Informe Automatizado de Bajas de LaLiga
 
-Última actualización mediante API Comunio: **2026-09-17**
+Última actualización automática de la jornada: **2026-09-17**
 
-| Equipo             | Jugador             | Tipo de Incidencia   | Estado        | Detalle              |
-|:-------------------|:--------------------|:---------------------|:--------------|:---------------------|
-| Atlético de Madrid | Thomas Lemar        | Física / Médica      | Duda          | Molestias físicas    |
-| FC Barcelona       | Andreas Christensen | Física / Médica      | Baja (Lesión) | Tendinopatía aquilea |
-| Real Madrid        | Éder Militão        | Física / Médica      | Baja (Lesión) | Rotura de ligamento  |
+| Equipo             | Jugador           | Tipo de Incidencia   | Estado   | Detalle                      |
+|:-------------------|:------------------|:---------------------|:---------|:-----------------------------|
+| Alavés             | Hugo Novoa        | Física / Médica      | Baja     | Molestias en el pubis        |
+| Athletic Club      | Unai Simón        | Física / Médica      | Baja     | Operado de la muñeca         |
+| Atlético de Madrid | Pablo Barrios     | Física / Médica      | Baja     | Lesión muscular en la pierna |
+| FC Barcelona       | Dani Olmo         | Física / Médica      | Baja     | Lesión en el bíceps femoral  |
+| FC Barcelona       | Fermín López      | Física / Médica      | Baja     | Lesión en el recto anterior  |
+| FC Barcelona       | Marc Bernal       | Física / Médica      | Baja     | Rotura de ligamento cruzado  |
+| Real Madrid        | Dani Ceballos     | Física / Médica      | Baja     | Esguince de tobillo          |
+| Real Madrid        | Eduardo Camavinga | Física / Médica      | Baja     | Esguince de rodilla          |
+| Real Sociedad      | Hamari Traoré     | Física / Médica      | Baja     | Rotura de ligamento cruzado  |
 
-*Los archivos Excel detallados se guardan de forma acumulativa en la carpeta `informes/`.*
+*Los archivos Excel detallados se acumulan cronológicamente dentro de la carpeta `informes/`.*
