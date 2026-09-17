@@ -1,95 +1,80 @@
 import requests
-from bs4 import BeautifulSoup
 import pandas as pd
 import datetime
 import os
 
-def scraping_futbol_fantasy():
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
-        'Accept-Language': 'es-ES,es;q=0.9'
+def extraer_bajas_api():
+    # Obtener de forma segura la API Key desde los secretos de GitHub
+    api_key = os.environ.get("API_FOOTBALL_KEY")
+    
+    if not api_key:
+        print("Error: No se ha configurado la API Key en los secretos de GitHub.")
+        return []
+
+    url = "https://api-sports.io"
+    
+    # ID de LaLiga EA Sports = 140. Temporada actual obtenida dinámicamente.
+    año_actual = datetime.datetime.now().year
+    
+    query_params = {
+        "league": "140",
+        "season": str(año_actual)
     }
-    lista_bajas = []
+    
+    headers = {
+        "x-rapidapi-key": api_key,
+        "x-rapidapi-host": "v3.football.api-sports.io"
+    }
 
-    # 1. EXTRACCIÓN DE LESIONADOS Y SANCIONADOS UNIFICADA
-    urls = [
-        ("https://futbolfantasy.com", "Física / Médica"),
-        ("https://futbolfantasy.com", "Disciplinaria (Sanción)")
-    ]
-
-    for url, tipo_incidencia in urls:
-        try:
-            res = requests.get(url, headers=headers, timeout=20)
-            if res.status_code == 200:
-                soup = BeautifulSoup(res.text, 'html.parser')
+    try:
+        response = requests.get(url, headers=headers, params=query_params, timeout=20)
+        if response.status_code == 200:
+            datos_json = response.json()
+            lista_jugadores = datos_json.get("response", [])
+            
+            bajas_estructuradas = []
+            for item in lista_jugadores:
+                jugador = item.get("player", {})
+                equipo = item.get("team", {})
+                incidencia = item.get("injury", {})
                 
-                # Buscamos los bloques de todos los equipos disponibles en la página
-                bloques_equipos = soup.find_all('div', class_='box-tabla-equipo')
-                
-                for bloque in bloques_equipos:
-                    nombre_equipo = bloque.find('h2').text.strip() if bloque.find('h2') else "Desconocido"
-                    
-                    # Buscamos todas las celdas o filas que contienen nombres de futbolistas
-                    filas = bloque.find_all('tr')
-                    for fila in filas:
-                        # Extraemos el nombre buscando la clase común o enlaces
-                        nombre_elem = fila.find('span', class_='nombre') or fila.find('a')
-                        if nombre_elem:
-                            nombre_jugador = nombre_elem.text.strip()
-                            
-                            # Saltamos cabeceras de tabla falsas
-                            if nombre_jugador.lower() in ['jugador', '', 'desconocido']:
-                                continue
-                                
-                            # Identificar el estado por las clases de la fila
-                            clases = fila.get('class', [])
-                            estado = "Baja"
-                            if "duda" in clases:
-                                estado = "Duda"
-                            elif "alta" in clases:
-                                estado = "Alta"
-                                
-                            # Encontrar el motivo de la baja
-                            motivo_elem = fila.find('td', class_='motivo')
-                            motivo = motivo_elem.text.strip() if motivo_elem else "No especificado"
-                            
-                            lista_bajas.append({
-                                "Equipo": nombre_equipo,
-                                "Jugador": nombre_jugador,
-                                "Tipo de Incidencia": tipo_incidencia,
-                                "Estado": estado,
-                                "Detalle": motivo
-                            })
-        except Exception as e:
-            print(f"Error procesando {url}: {e}")
-
-    # Si por algún motivo la estructura web cambia radicalmente, creamos datos de respaldo estructurados de LaLiga
-    if not lista_bajas:
-        lista_bajas = [
-            {"Equipo": "Real Madrid", "Jugador": "Militão", "Tipo de Incidencia": "Física / Médica", "Estado": "Baja", "Detalle": "Rotura Ligamento"},
-            {"Equipo": "FC Barcelona", "Jugador": "Gavi", "Tipo de Incidencia": "Física / Médica", "Estado": "Duda", "Detalle": "Molestias"},
-            {"Equipo": "Atlético de Madrid", "Jugador": "Koke", "Tipo de Incidencia": "Disciplinaria (Sanción)", "Estado": "Baja", "Detalle": "Cinco Amarillas"}
-        ]
-
-    return lista_bajas
+                bajas_estructuradas.append({
+                    "Equipo": equipo.get("name", "Desconocido"),
+                    "Jugador": jugador.get("name", "Desconocido"),
+                    "Tipo de Incidencia": "Médica / Sanción",
+                    "Estado": incidencia.get("type", "Baja"),
+                    "Detalle": incidencia.get("reason", "No especificado")
+                })
+            
+            return bajas_estructuradas
+        else:
+            print(f"Error en API: Código de estado {response.status_code}")
+            return []
+    except Exception as e:
+        print(f"Error de conexión con la API: {e}")
+        return []
 
 def guardar_reportes(datos):
+    if not datos:
+        print("No se encontraron bajas activas en la API para esta combinación de liga/año.")
+        datos = [{"Equipo": "Sin datos", "Jugador": "N/A", "Tipo de Incidencia": "N/A", "Estado": "N/A", "Detalle": "API no devolvió registros"}]
+
     df = pd.DataFrame(datos)
     os.makedirs("informes", exist_ok=True)
     fecha_hoy = datetime.datetime.now().strftime("%Y-%m-%d")
     
-    # Guardar archivos nativos
+    # Guardar Excel y CSV en la carpeta informes/
     df.to_excel(f"informes/bajas_laliga_{fecha_hoy}.xlsx", index=False)
     df.to_csv(f"informes/bajas_laliga_{fecha_hoy}.csv", index=False, encoding='utf-8-sig')
     
-    # Sobrescribir portada con tabla de datos limpia
+    # Renderizar la portada README.md
     with open("README.md", "w", encoding="utf-8") as f:
-        f.write(f"# 📋 Informe Automatizado de Bajas de LaLiga\n\n")
-        f.write(f"Última actualización automática: **{fecha_hoy}**\n\n")
+        f.write(f"# 📋 Informe Automatizado de Bajas de LaLiga (API Real)\n\n")
+        f.write(f"Última actualización mediante API-Football: **{fecha_hoy}**\n\n")
         f.write(df.to_markdown(index=False))
-        f.write("\n\n*Los archivos Excel y CSV completos están guardados y actualizados cronológicamente dentro de la carpeta `informes/`.*")
-    print("Guardado completado con éxito.")
+        f.write("\n\n*Los históricos se encuentran a salvo en la carpeta `informes/`.*")
+    print(f"Archivos guardados con éxito para la fecha: {fecha_hoy}")
 
 if __name__ == "__main__":
-    datos_extraidos = scraping_futbol_fantasy()
-    guardar_reportes(datos_extraidos)
+    datos_reales = extraer_bajas_api()
+    guardar_reportes(datos_reales)
