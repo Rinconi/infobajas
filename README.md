@@ -1,9 +1,11 @@
 # 📋 Informe Automatizado de Bajas de LaLiga
 
-Última actualización por escaneo de equipos: **2026-09-17**
+Última actualización mediante API Comunio: **2026-09-17**
 
-| Equipo    | Jugador   | Tipo de Incidencia   | Estado   | Detalle                     |
-|:----------|:----------|:---------------------|:---------|:----------------------------|
-| Sin bajas | Ninguno   | N/A                  | N/A      | Todos los planteles limpios |
+| Equipo             | Jugador             | Tipo de Incidencia   | Estado        | Detalle              |
+|:-------------------|:--------------------|:---------------------|:--------------|:---------------------|
+| Atlético de Madrid | Thomas Lemar        | Física / Médica      | Duda          | Molestias físicas    |
+| FC Barcelona       | Andreas Christensen | Física / Médica      | Baja (Lesión) | Tendinopatía aquilea |
+| Real Madrid        | Éder Militão        | Física / Médica      | Baja (Lesión) | Rotura de ligamento  |
 
-*Los históricos en Excel se guardan automáticamente en la carpeta `informes/`.*
+*Los archivos Excel detallados se guardan de forma acumulativa en la carpeta `informes/`.*
