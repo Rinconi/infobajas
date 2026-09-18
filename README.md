@@ -1,6 +1,6 @@
 # 📋 Informe de Bajas de Primera División (Datos: Comuniazo)
 
-Última actualización automática: **2026-09-17**
+Última actualización automática: **2026-09-18**
 
 ## ⚽ Alavés
 
